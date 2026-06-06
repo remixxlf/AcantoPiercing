@@ -35,8 +35,8 @@ function Landing() {
   return (
     <div className="min-h-screen bg-white text-black">
       <Nav />
-      <Hero />
       <About />
+      <Hero />
       <Booking />
       <Contact />
       <Footer />

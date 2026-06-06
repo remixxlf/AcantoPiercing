@@ -1,5 +1,5 @@
 export default function BotaoVerCatalogo() {
-  const URL_CATALOGO = "https://www.canva.com/design/DAG_tFnnFcc/TkVBYiWBDriZGbuyWDbtIQ/view?utm_content=DAG_tFnnFcc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hfd0c6deccc#2";
+  const URL_CATALOGO = "https://www.canva.com/design/DAG_tFnnFcc/TkVBYiWBDriZGbuyWDbtIQ/view?utm_content=DAG_tFnnFcc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hfd0c6deccc#1";
 
   return (
     <a

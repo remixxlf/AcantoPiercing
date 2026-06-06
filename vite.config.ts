@@ -4,13 +4,8 @@ export default defineConfig({
   tanstackStart: {
     server: { entry: "server" },
   },
-  // Adicionamos esta parte para forçar o preset do Netlify:
-  vite: {
-    ssr: {
-      noExternal: true, // Garante que o servidor inclua todas as dependências
-    },
-  },
+  // Mantemos apenas a regra do Netlify, sem forçar o SSR do React!
   nitro: {
-    preset: 'netlify', // Esta é a chave para o erro sumir!
+    preset: 'netlify',
   },
 });

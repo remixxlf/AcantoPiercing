@@ -141,20 +141,23 @@ function About() {
         <div className="lg:col-span-7 lg:pl-8 order-2">
           <p className="text-[10px] uppercase tracking-wider text-green-600">Prazer, Carol Sales</p>
           <h2 className="mt-2 font-display text-xl sm:text-2xl lg:text-5xl tracking-tight">
-            Mãe, empreendedora e <em className="text-green-600 not-italic">sua piercer.</em>
+            Mãe, empreendedora e <em className="text-green-600 not-italic">agora, a sua piercer.</em>
           </h2>
-          <p className="mt-3 text-sm text-gray-700">
-            Atuo desde 2021 em Feira de Santana. Cada cliente recebe atenção, escuta e cuidado único.
+          <p className="mt-4 text-sm text-gray-700 leading-relaxed">
+            Sou Carol Sales, fundadora da Acanto Piercing, em Feira de Santana - BA. Atuando na área desde 2021, encontrei na perfuração corporal uma forma de unir técnica, cuidado e autoestima.
+          </p>
+          <p className="mt-3 text-sm text-gray-700 leading-relaxed">
+            Mãe, empreendedora e apaixonada pelo que faço, acredito que cada perfuração carrega uma história. E será um prazer fazer parte da sua.
           </p>
           <ul className="mt-4 space-y-1.5 text-xs">
-            {["Técnicas seguras de perfuração", "Atendimento humanizado sem pressa", "Suporte completo no pós"].map((item) => (
+            {["Formação contínua em técnicas seguras", "Atendimento humanizado, respeitoso e sem pressa", "Suporte completo no pós-perfuração"].map((item) => (
               <li key={item} className="flex items-start gap-2">
                 <ShieldCheck className="h-3.5 w-3.5 text-green-600 shrink-0" />
                 <span>{item}</span>
               </li>
             ))}
           </ul>
-          <a href={INSTAGRAM} target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium hover:text-green-600">
+          <a href={INSTAGRAM} target="_blank" rel="noreferrer" className="mt-4 inline-flex items-center gap-1.5 text-xs font-medium hover:text-green-600">
             <Instagram className="h-3.5 w-3.5" /> @acantopiercing
           </a>
         </div>

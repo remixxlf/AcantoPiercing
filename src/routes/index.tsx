@@ -147,7 +147,7 @@ function About() {
             Sou Carol Sales, fundadora da Acanto Piercing, em Feira de Santana - BA. Atuando na área desde 2021, encontrei na perfuração corporal uma forma de unir técnica, cuidado e autoestima.
           </p>
           <p className="mt-3 text-sm text-gray-700 leading-relaxed">
-            Mãe, empreendedora e apaixonada pelo que faço, acredito que cada perfuração carrega uma história. E será um prazer fazer parte da sua.
+             Apaixonada pelo que faço, acredito que cada perfuração carrega uma história. E será um prazer fazer parte da sua.
           </p>
           <ul className="mt-4 space-y-1.5 text-xs">
             {["Formação contínua em técnicas seguras", "Atendimento humanizado, respeitoso e sem pressa", "Suporte completo no pós-perfuração"].map((item) => (

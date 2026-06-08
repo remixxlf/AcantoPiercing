@@ -16,17 +16,59 @@ import BotaoVerCatalogo from "@/components/ui/BotaoVerCatalogo";
 const AGENDARSITE = "https://online.maapp.com.br/acantopiercing";
 const WHATSAPP = "https://wa.me/5575983721788?text=Ol%C3%A1%20Carol!%20Tenho%20duvida%20em%20relaçao%20ao%20piercing.";
 const INSTAGRAM = "https://instagram.com/acantopiercing";
-const MAPS = "https://www.google.com/maps/search/?api=1&query=Rua+Jos%C3%A9+Guimar%C3%A3es+Suzart+45+Serraria+Brasil+Feira+de+Santana";
+const MAPS = "https://maps.google.com/?q=Rua+Jose+Guimaraes+Suzart,+45+Serraria+Brasil+Feira+de+Santana+BA";
+
+// Objeto de dados estruturados (JSON-LD Schema) para o Google Maps/Busca Local
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "HealthAndBeautyBusiness",
+  "name": "Acanto Piercing",
+  "alternateName": "Estúdio Acanto Piercing Feira de Santana",
+  "description": "Estúdio profissional de piercing com Carol Sales. Atendimento humanizado, biossegurança rigorosa e aplicação de joias em titânio.",
+  "url": "https://online.maapp.com.br/acantopiercing",
+  "telephone": "+5575983721788",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua José Guimarães Suzart, 45",
+    "addressLocality": "Feira de Santana",
+    "addressRegion": "BA",
+    "postalCode": "44003-000",
+    "addressCountry": "BR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -12.2641,
+    "longitude": -38.9598
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
+  "sameAs": [
+    "https://instagram.com/acantopiercing"
+  ]
+};
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Acanto Piercing — Feira de Santana" },
-      { name: "description", content: "Estúdio profissional de piercing com Carol Sales. Atendimento humanizado e joias em titânio." },
-      { property: "og:title", content: "Acanto Piercing" },
+      { title: "Acanto Piercing — Estúdio de Piercing em Feira de Santana" },
+      { name: "description", content: "Estúdio profissional de piercing com Carol Sales em Feira de Santana - BA. Atendimento humanizado, biossegurança e joias 100% em titânio." },
+      { property: "og:title", content: "Acanto Piercing — Feira de Santana" },
       { property: "og:image", content: heroImg },
     ],
-    links: [{ rel: "icon", type: "image/png", href: "/favicon.ico" }]
+    links: [{ rel: "icon", type: "image/png", href: "/favicon.ico" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(localBusinessSchema),
+      },
+    ],
   }),
   component: Landing,
 });
@@ -73,11 +115,12 @@ function Hero() {
             <Sparkles className="h-2.5 w-2.5 text-green-600" />
             Feira de Santana · BA
           </div>
+          {/* O título regressou ao formato original solicitado */}
           <h1 className="mt-3 font-display text-2xl sm:text-3xl lg:text-5xl leading-[1.1]">
             Piercing profissional, <em className="text-green-600 not-italic">com cuidado</em> em cada detalhe.
           </h1>
           <p className="mt-3 text-sm text-gray-700 leading-relaxed">
-            Higiene rigorosa, joias biocompatíveis e atendimento humanizado sem pressa.
+            Higiene rigorosa, joias biocompatíveis em titânio e atendimento humanizado sem pressa.
           </p>
           <div className="mt-5 flex flex-wrap gap-2.5">
             <a
@@ -98,7 +141,7 @@ function Hero() {
         <div className="relative">
           <img
             src={heroImg}
-            alt="Joias em titânio"
+            alt="Joias de Piercing em Titânio em Feira de Santana"
             width={1080}
             height={1440}
             className="rounded-lg lg:rounded-[1.75rem] shadow-elevated object-cover w-full aspect-[4/5]"
@@ -132,7 +175,7 @@ function About() {
         <div className="lg:col-span-5 order-1">
           <img
             src={carolImg}
-            alt="Carol Sales"
+            alt="Carol Sales - Piercer Profissional em Feira de Santana"
             width={1024}
             height={1280}
             className="rounded-lg lg:rounded-[1.75rem] shadow-elevated object-cover aspect-[4/5] w-full"
@@ -147,7 +190,7 @@ function About() {
             Sou Carol Sales, fundadora da Acanto Piercing, em Feira de Santana - BA. Atuando na área desde 2021, encontrei na perfuração corporal uma forma de unir técnica, cuidado e autoestima.
           </p>
           <p className="mt-3 text-sm text-gray-700 leading-relaxed">
-             Apaixonada pelo que faço, acredito que cada perfuração carrega uma história. E será um prazer fazer parte da sua.
+            Apaixonada pelo que faço, acredito que cada perfuração carrega uma história. E será um prazer fazer parte da sua.
           </p>
           <ul className="mt-4 space-y-1.5 text-xs">
             {["Formação contínua em técnicas seguras", "Atendimento humanizado, respeitoso e sem pressa", "Suporte completo no pós-perfuração"].map((item) => (
